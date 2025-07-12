@@ -19,12 +19,7 @@ def generate_3d(prompt: str = Query(...)):
     os.makedirs(output_dir, exist_ok=True)
 
     # Run generation in background thread
-    def run_generation():
-        generate_shapes([prompt], output_dir=output_dir)
-
-    thread = threading.Thread(target=run_generation)
-    thread.start()
-    thread.join()
+    generate_shapes([prompt], output_dir=output_dir)
 
     obj_path = os.path.join(output_dir, "mesh_0.obj")
     if os.path.exists(obj_path):
