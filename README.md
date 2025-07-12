@@ -15,5 +15,14 @@ Endpoints:
 
 1. `/generate3d`
 
-Example (cURL): `curl "http://127.0.0.1:8000/generate3d?prompt=a%20robotic%20spider" --output spider.obj`
+Example (cURL): `curl "http://127.0.0.1:8000/generate3d?prompt=a%20robotic%20spider" --output mesh.obj`
 
+2. `/status`
+
+Example (cURL): `curl "http://127.0.0.1:8000/status"`
+
+
+
+# Sample output:
+
+![red shark](./outputs/sample.gif)
